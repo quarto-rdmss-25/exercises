@@ -4,9 +4,33 @@ format: html
 editor: visual
 ---
 
-1.  Create a 3 row x 2 col table, populate with a column for restaurant + column for cuisine, and then add 3 examples. Then, cross reference it from text.
+```{r}
+#| label: load-packages
+#| message: false
 
-2.  Include the R logo and the Quarto logo from the `images/` folder as subfigures of a single figure.
+library(tidyverse)
+library(ggthemes)
+library(palmerpenguins)
+```
 
-3.  Add a label and cross-reference to the figure generated from the code below
+1.  Create a 2 row x 2 column table, populate with a column for restaurant + column for cuisine. Then, cross reference it from text.
 
+2.  Include the Quarto logo from the `images/` folder as a figure. Add a caption, id, and cross-reference to the figure.
+
+3.  **Stretch goal:** Add a caption, label, and cross-reference to the figure generated from the code below.
+
+```{r}
+#| warning: false
+#| fig-width: 5
+#| fig-asp: 0.618
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_length_mm, 
+                     y = bill_depth_mm,
+                     color = species,
+                     shape = species)) +
+  geom_point() +
+  scale_color_colorblind() +
+  labs(x = "Bill length (mm)", y = "Bill depth (mm)") +
+  theme_minimal()
+```
