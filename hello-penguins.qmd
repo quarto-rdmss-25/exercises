@@ -1,5 +1,6 @@
 ---
 title: "Hello, Penguins!"
+author: ""
 format: html
 editor: visual
 ---
@@ -25,8 +26,6 @@ The figure below is a scatterplot of species of penguins.
 ```{r}
 #| label: bill-dims-species
 #| warning: false
-#| fig-width: 5
-#| fig-asp: 0.618
 
 ggplot(data = penguins,
        mapping = aes(x = bill_length_mm, 
