@@ -1,7 +1,7 @@
 ---
 title: "Tables and figures"
 format: html
-editor: visual
+editor: source
 ---
 
 ```{r}
@@ -13,16 +13,45 @@ library(ggthemes)
 library(palmerpenguins)
 ```
 
-1.  Create a 2 row x 2 column table, populate with a column for restaurant + column for cuisine. Then, cross reference it from text.
+## Task 1: Cross-reference an image
 
-2.  Include the Quarto logo from the `images/` folder as a figure. Add a caption, id, and cross-reference to the figure.
+1.  Include the Quarto logo from the `images/` folder as a figure. Add a caption, id, and cross-reference to the figure. Tips: <https://quarto-ambition.github.io/website/1-2-documents/1-2-documents.html#/figure-cross-references>
 
-3.  **Stretch goal:** Add a caption, label, and cross-reference to the figure generated from the code below.
+## Task 2: Cross-reference a table from code
+
+1.  Render the document and identify if the cross-reference to the table generated from the code below works.
+
+2.  Fix the label in the code-chunk below so that the cross-reference works.
+
+3.  Render the document to check if the cross-reference to the table generated from the code below works
+
+See @tbl-penguins for data on a few penguins.
+
+```{r}
+#| label: penguins
+#| tbl-cap: Bill depth of penquins by island and species.
+
+penguins |> 
+  filter(!is.na(bill_depth_mm)) |> 
+  group_by(island, species) |>
+  summarise(n = n(),
+            mean_bill_depth = mean(bill_depth_mm),
+            sd_bill_depth = sd(bill_depth_mm)) |>
+  ungroup() |> 
+  gt() |> 
+  fmt_number(columns = c(mean_bill_depth, sd_bill_depth),
+             decimals = 1)
+```
+
+## Task 3: Cross-reference a figure generated from
+
+1.  Add a caption and a label for a figure to the code chunk options below.
+2.  Add a cross-reference to the figure generated from the code below.
+
+In ...
 
 ```{r}
 #| warning: false
-#| fig-width: 5
-#| fig-asp: 0.618
 
 ggplot(data = penguins,
        mapping = aes(x = bill_length_mm, 
