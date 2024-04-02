@@ -11,4 +11,4 @@ editor: source
 
 4. Add an ordered list with one sub-item.
 
-5. **Stretch goal**: Add an inline image. Use the logo that is stored at `images/quarto-logo.png` in your project folder. Tipp: Check [quarto.org](https://quarto.org/) documentation markdown syntax on links and images: <https://quarto.org/docs/authoring/markdown-basics.html#links-images>
+5. **Stretch goal**: Add an inline image. Use the logo that is stored at `images/quarto-logo.png` in your project folder in RStudio. Tipp: Check [quarto.org](https://quarto.org/) documentation markdown syntax on links and images: <https://quarto.org/docs/authoring/markdown-basics.html#links-images>
