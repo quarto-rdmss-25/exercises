@@ -1,8 +1,8 @@
 # exercises
 
-Exercises for "Open Science Tools - authoring and publishing workflows for collaborative scientific writing"
+Exercises for "Quarto - authoring and publishing tools for collaborative scientific writing". 
 
-See https://ost-hs23.github.io/website/ for course website where exercises are used.
+See https://quarto-ambition.github.io/website/ for course website where exercises are used.
 
 ## Attribution
 
