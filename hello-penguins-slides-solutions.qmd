@@ -37,7 +37,6 @@ The figure below is a scatterplot of species of penguins.
 #| fig-width: 5
 #| fig-asp: 0.618
 #| output-location: column-fragment
-#| code-line-numbers: "|2-5"
 
 ggplot(penguins,
        aes(x = bill_length_mm, 
@@ -73,8 +72,8 @@ penguins |>
 
 ## Modeling
 
+::: incremental
 -   info about the model
 -   text about results
 -   comments about shortcomings
-
-
+:::
