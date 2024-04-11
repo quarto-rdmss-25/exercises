@@ -2,7 +2,7 @@
 
 Exercises for "Quarto - authoring and publishing tools for collaborative scientific writing". 
 
-See https://quarto-ambition.github.io/website/ for course website where exercises are used.
+See https://quarto-rdmss-24.github.io/website/ for course website where exercises are used.
 
 ## Attribution
 
